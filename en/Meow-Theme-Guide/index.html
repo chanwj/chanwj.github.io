@@ -1,0 +1,240 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="author" content="小橘猫"/><meta name="description" content="Preview of MEOW: A Cute Theme For Hexo Blog."/><meta name="keyword" content="Hexo,Theme,Meow,博客,开源"/><title>「Meow」Theme Guide - MEOW - A Cute and Bright Hexo Theme</title><link rel="shortcut icon" href="/img/site-icon.png">
+<link rel="stylesheet" href="/css/style.css">
+
+
+<link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+<script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script>
+</head><body><header><div class="top-nav" ondblclick="scrollToTop()"><div class="nav-info"><div class="nav-icon"><img id="nav-icon" src="/img/site-icon.png"/></div><div class="nav-title"><a id="nav-title" href="/" title="Home">MEOW</a></div></div><div class="nav-ribbon"><div class="top-menu-expanded"><a class="top-menu-item" href="/archives"><span>Archives</span></a><a class="top-menu-item" href="/categories"><span>Categories</span></a><a class="top-menu-item" href="/tags"><span>Tags</span></a><a class="top-menu-item" href="/about"><span>About</span></a></div><div class="top-search" onclick="toggleSearchWindow()"><div id="top-search-btn" title="Search"><i class="icon fa-solid fa-magnifying-glass"></i><span>Search</span></div></div><div id="top-menu-btn" onclick="openTopMenu()" title="Toggle Menu"><i class="fa-solid fa-bars fa-lg"></i></div></div></div></header><div id="top-menu-hidden"><div class="menu-hidden-content"><div class="menu-hidden-nav"><a class="menu-hidden-item" href="/archives"><i class="fa-solid fa-box-archive fa-sm"></i><span>Archives</span></a><a class="menu-hidden-item" href="/categories"><i class="fa-regular fa-folder-open fa-sm"></i><span>Categories</span></a><a class="menu-hidden-item" href="/tags"><i class="fa-solid fa-tags fa-sm"></i><span>Tags</span></a><a class="menu-hidden-item" href="/about"><i class="fa-solid fa-paw fa-sm"></i><span>About</span></a></div></div><div class="menu-hidden-blank" onclick="closeTopMenu()"></div></div>
+<div class="blog-info"><div class="blog-pic"><img id="blog-pic" src="/img/site-icon.png"/></div><div class="blog-title"><i class="fa-solid fa-paw fa-2xs fa-rotate-by"></i><span>MEOW</span><i class="fa-solid fa-paw fa-2xs fa-rotate-by"></i></div><div class="blog-desc">Preview of Meow: a cute and bright theme for Hexo blog. It optimizes the adaptability of original novel and fanfiction. It is also suitable for tutorial sharing, daily recording, and other purposes.</div></div><div class="main"><div class="main-content"><article class="post"><div class="post-title"><h1><i class="fa-solid fa-paw"></i>「Meow」Theme Guide</h1></div><div class="post-info"><div class="post-info-first-line"><div class="post-date"><i class="icon fa-regular fa-calendar-plus" title="Published date"></i><time class="publish-time">2024-04-23</time><i class="icon fa-regular fa-calendar-check" title="Updated date"></i><time class="update-time">2024-04-27</time></div>
+<div class="post-categories"><i class="icon fa-regular fa-folder-open" title="Categories"></i><a class="post-category" href="/categories/Hexo/">Hexo</a><i class="icon fa-regular fa-folder-open" title="Categories"></i><a class="post-category" href="/categories/Hexo/Theme-Meow/">Theme Meow</a></div>
+<div class="post-tags"><i class="icon fa-solid fa-tags" title="Tags"></i><a class="post-tag" href="/tags/Tutorial/">Tutorial</a><i class="icon fa-solid fa-tags" title="Tags"></i><a class="post-tag" href="/tags/English/">English</a></div></div><div class="post-info-second-line"><div class="post-copyright"><i class="icon fa-brands fa-creative-commons" title="Copyright"></i><span>Copyright: </span><a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh-hans" title="CC BY-NC-ND 4.0">BY-NC-ND 4.0</a></div>
+<div class="post-word-count"><i class="icon fa-solid fa-pen-to-square"></i><span>About 1431 words</span></div><div class="pageview-post"><i class="icon fa-regular fa-eye"></i><span id="busuanzi_container_page_pv">Hits: <span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner"></i></span></span></div></div></div><div class="post-content"><p>This guide introduces detailed methods of installation and configuration for Hexo theme <a target="_blank" rel="noopener" href="https://github.com/chanwj/hexo-theme-meow">Meow</a>, including downloading the theme, installing dependencies, modifying core configurations, and introducing the usage of some special configurations, hope it will be helpful to you.</p>
+<p>Click the TOC button on the floating toolbar in the bottom right corner to turn on&#x2F;off title navigation, making it convenient to access the content you need to check directly.</p>
+<span id="more"></span>
+
+<br/>
+
+<h2 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h2><h3 id="Get-The-Theme"><a href="#Get-The-Theme" class="headerlink" title="Get The Theme"></a>Get The Theme</h3><p>Execute the following command in the root directory of the blog.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> -b master https://github.com/chanwj/hexo-theme-meow.git themes/meow</span><br></pre></td></tr></table></figure>
+<br/>
+
+<h3 id="Apply-The-Theme"><a href="#Apply-The-Theme" class="headerlink" title="Apply The Theme"></a>Apply The Theme</h3><p>Modify the <code>_config. yml</code> file in the root directory. Set theme variable to <code>meow</code>.</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">theme:</span> <span class="string">meow</span></span><br></pre></td></tr></table></figure>
+<br/>
+
+<h3 id="Install-Dependency"><a href="#Install-Dependency" class="headerlink" title="Install Dependency"></a>Install Dependency</h3><p><em>Meow</em> uses Pug for rendering. Please install the Pug renderer in advance.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-renderer-pug --save</span><br></pre></td></tr></table></figure>
+
+<br/>
+
+<hr>
+<br/>
+
+<h2 id="Theme-Configuration"><a href="#Theme-Configuration" class="headerlink" title="Theme Configuration"></a>Theme Configuration</h2><p>Please change theme configurations in <code>_config.yml</code> file under the theme directory.</p>
+<p>The theme configuration file contains comments in both Chinese and English, which make it simple and easy to use. For some special configurations, please refer to the following sections.</p>
+<p>(Tip: Everytime before you update the theme, it is recommended to back up the theme configuration file to avoid losing customized content.)</p>
+<br/>
+
+<h3 id="Search-Function"><a href="#Search-Function" class="headerlink" title="Search Function"></a>Search Function</h3><p>Search function depends on plugin <code>hexo-generator-search</code>. Therefore, if you need to use the search function, please install this dependency first.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-search --save</span><br></pre></td></tr></table></figure>
+
+<p>Step 2: Add the following configuration to the <code>_config. yml </code>file in the root directory. (You can check the specific meaning of this configuration in <a target="_blank" rel="noopener" href="https://github.com/wzpan/hexo-generator-search">hexo-generator-search</a>‘s page.</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Search function</span></span><br><span class="line"><span class="attr">search:</span></span><br><span class="line">  <span class="attr">path:</span> <span class="string">search.xml</span></span><br><span class="line">  <span class="attr">field:</span> <span class="string">post</span></span><br><span class="line">  <span class="attr">content:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">template:</span> <span class="string">./search.xml</span></span><br></pre></td></tr></table></figure>
+
+<p>Step 3: Find the <code>hexo-generator-search</code> folder of the <code>node_modules</code> folder in the root directory. Then enter the <code>templates</code> folder and copy <code>search.xml</code>(template file which can help build the search content XML) to the root directory of the blog.</p>
+<p>Step 4: Enable the configuration of search function in <code>_config.yml</code> under the theme directory.</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">search:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<p>Set it to <code>false</code> to disable the search function, including not displaying the search entry, not importing search related JavaScript, and not building search content XML.</p>
+<br/>
+
+<h3 id="Special-Pages"><a href="#Special-Pages" class="headerlink" title="Special Pages"></a>Special Pages</h3><p><em>Meow</em> has created layout templates for those three pages: Categories, Tags and About. To display these pages, please execute the following commands.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo new page categories</span><br><span class="line">hexo new page tags</span><br><span class="line">hexo new page about</span><br></pre></td></tr></table></figure>
+
+<p>Next, find these pages’s folder in the <code>source</code> folder under the root directory. Open the <code>index.md</code> inside and add layout parameter to the Front-matter at the top. Change the parameter value correctly.</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">layout:</span> <span class="comment"># categories | tags | about</span></span><br></pre></td></tr></table></figure>
+
+<br/>
+
+<h3 id="Selectable"><a href="#Selectable" class="headerlink" title="Selectable"></a>Selectable</h3><p><em>Meow</em> supports configuring whether users can select text content from the website directly. True: they can. False: they can not.</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">selectable:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<br/>
+
+<h3 id="TOC"><a href="#TOC" class="headerlink" title="TOC"></a>TOC</h3><p><em>Meow</em> supports generating tables of contents for articles. You can enable this function with the following configuration.</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">toc:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<p>When toc function is enabled, <em>Meow</em> will generate toc for all articles by default. If you don’t want to generate toc for some articles, you can turn off this function separately in the Front-matter at the top of the article file.</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">toc:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+
+<br/>
+
+<h3 id="Contact"><a href="#Contact" class="headerlink" title="Contact"></a>Contact</h3><p><code>contact_info</code> is used to configure the contact module in “About” page. The list below shows the default options which can display the website icon automatically. If you don’t want to display some of these items, just leave the value blank.</p>
+<ul>
+<li>Email</li>
+<li>Github</li>
+<li>Twitter</li>
+<li>Facebook</li>
+<li>Instagram</li>
+<li>Tiktok</li>
+<li>Bilibili</li>
+<li>Weibo</li>
+<li>Mastodon</li>
+<li>Wechat</li>
+</ul>
+<p>Supplementary explanation:</p>
+<ul>
+<li>If you want to add other contact item, please format in <code>name: url</code>. Note that custom contact item will be display with paw icon uniformity.</li>
+<li>Email: Unlike the other options, the parameter value should be email address.</li>
+<li>Wechat: Unlike the other options, the parameter value should be account name.</li>
+</ul>
+<br/>
+
+<hr>
+<br/>
+
+<h2 id="Language-Configuration"><a href="#Language-Configuration" class="headerlink" title="Language Configuration"></a>Language Configuration</h2><p><em>Meow</em> provides two languages: Chinese and English. If you want to change site language, configure it in <code>_config.yml</code> under the root directory of the site.</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">language:</span> <span class="string">en</span> <span class="comment"># Chinese: zh-CN | English: en</span></span><br></pre></td></tr></table></figure>
+
+<p>In addition, for different articles or pages, language setting can be changed separately in Front-matter.</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">lang:</span> <span class="string">en</span></span><br></pre></td></tr></table></figure>
+
+<p>If you need to customize the display values of various items on the site, you can open language files in the <code>languages</code> folder under the theme directory, and then modify the parameters inside.</p>
+<p>Language files also have comments, which introduce every configuration clearly.</p>
+<br/>
+
+<h3 id="“About”-page"><a href="#“About”-page" class="headerlink" title="“About” page"></a>“About” page</h3><p>It should be noted that <em>Meow</em> has created a layout template for “About” page. For the convenience of internationalization(i18n), many display values in “About” page are integrated into language files for configuration.</p>
+<p>Click here to check the English Version of “About” page: <a href="/en/about">About</a></p>
+<br/>
+
+<hr>
+<br/>
+
+<h2 id="Fiction-Scaffold"><a href="#Fiction-Scaffold" class="headerlink" title="Fiction Scaffold"></a>Fiction Scaffold</h2><p><em>Meow</em> optimizes the creation of literary works, allowing every author to use scaffold to publish original works easily, including serial novels, fanfictions, etc. </p>
+<p>Check the article style using fiction scaffold <a href="/%E5%93%A5%E6%96%AF%E6%8B%89-%E6%80%AA%E5%85%BD%E4%B9%8B%E7%8E%8B/">here</a>.</p>
+<br/>
+
+<h3 id="Apply-Scaffold"><a href="#Apply-Scaffold" class="headerlink" title="Apply Scaffold"></a>Apply Scaffold</h3><p>Copy <code>fiction.md</code>(the fiction scaffold file) in theme directory into <code>scaffolds</code> folder under the root directory. Afterwards you can generate new literary work file using fiction scaffold with the following command.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new fiction <span class="string">&quot;article&#x27;s title&quot;</span></span><br></pre></td></tr></table></figure>
+
+<br/>
+
+<h3 id="Scaffold-Configuration"><a href="#Scaffold-Configuration" class="headerlink" title="Scaffold Configuration"></a>Scaffold Configuration</h3><p><code>fiction.md</code> has its own Front-matter parameters, each of them has comment to explain their usage.</p>
+<p>Please note that <code>layout: post</code> and <code>type: fiction</code> are fixed configurations, do NOT change them.</p>
+<p>You can change the display values of these parameters through the <code>fiction</code> module in language files.</p>
+<br/>
+
+<h4 id="Meta"><a href="#Meta" class="headerlink" title="Meta"></a>Meta</h4><p>The meta module of article can be displayed by this configuration: <code>meta_show: true</code>.</p>
+<p>Detailed information should be configured in <code>meta_info</code>. The following options are supported by fiction scaffold for now.</p>
+<ul>
+<li><strong>type</strong></li>
+</ul>
+<p>The type of article, for example, Original Work, Fanfiton, etc.</p>
+<ul>
+<li><strong>fandom</strong></li>
+</ul>
+<p>If the type of article is ‘Fanction’, it’s generally necessary to indicate the fandom. Stay blank if you don’t want to show fandom information.</p>
+<ul>
+<li><strong>relationship</strong></li>
+</ul>
+<p>Relationships involved in the article, usually used to indicate romantic relationships. Important families and friendships can also be filled in. Leave it blank if you don’t want to show relationship information.</p>
+<ul>
+<li><strong>character</strong></li>
+</ul>
+<p>Major roles appear in the article. If you don’t want to show characters information, leave it blank.</p>
+<ul>
+<li><strong>rating</strong></li>
+</ul>
+<p>The rating of the article. You can only choose the following options:</p>
+<table>
+<thead>
+<tr>
+<th>Rating</th>
+<th>Description</th>
+<th>Style</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>General</td>
+<td>For general audiences, no warning</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Teen</td>
+<td>For teen and up audiences</td>
+<td>Bold</td>
+</tr>
+<tr>
+<td>Mature</td>
+<td>For adults, contains minor&#x2F;non detailed mature content</td>
+<td>Bold &amp; Red</td>
+</tr>
+<tr>
+<td>Explicit</td>
+<td>For adults, contains detailed descriptions of adult content, such as violence and pornography</td>
+<td>Bold &amp; Red</td>
+</tr>
+</tbody></table>
+<p>If you don’t want to show rating information, leave it blank.</p>
+<ul>
+<li><strong>warning</strong></li>
+</ul>
+<p>Warning information, which audiences should be aware of before reading the article. It can prevent audiences from seeing something they don’t like. For example, the death of the main characters, bloody and violent descriptions, forced love, etc.</p>
+<p>Warning will be displayed prominently in bold and red font. If you don’t need to display warning information or don’t want spoilers, you can leave this item blank.</p>
+<br/>
+
+<h4 id="Status"><a href="#Status" class="headerlink" title="Status"></a>Status</h4><p><code>status</code> is used to mark whether this article are completed and display tip at the end. There are two options to be choosen:</p>
+<table>
+<thead>
+<tr>
+<th>Status</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>complete</td>
+<td>Already completed</td>
+</tr>
+<tr>
+<td>inProgress</td>
+<td>Still in progress &#x2F; To be continued</td>
+</tr>
+</tbody></table>
+<p>If you don’t want to show status, leave it blank.</p>
+<br/>
+
+<h4 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h4><p><code>summary</code> is used to fill in brief introduction for the article, supporting Markdown syntax. If summary is complicated, please keep the content in quotation marks. Leave it blank if you don’t want to show summary.</p>
+<p>If the article has no excerpt, <em>Meow</em> will automatically detect whether the article has filled in summary. If summary exists, summary content will be displayed on homepage as excerpt.</p>
+<br/>
+
+<h4 id="Notes"><a href="#Notes" class="headerlink" title="Notes"></a>Notes</h4><p>Notes can be displayed before&#x2F;after the article, fill the contents in <code>notes_before</code> and <code>notes_after</code>. You can write some additional introductions and explanations for the article, express your ideas or say something to your audiences.</p>
+<p>Markdown syntax available. If notes is complicated, please keep the content in quotation marks. Leave it blank if you don’t want to show notes.</p>
+<br/>
+
+<hr>
+<br/>
+
+<h2 id="Style-Preview"><a href="#Style-Preview" class="headerlink" title="Style Preview"></a>Style Preview</h2><p>This site is created to display theme 「Meow」. You can check the styles of different pages of this theme, and also check the actual effects of various functions here.</p>
+<p>Besides, <em>Meow</em> has responsive design for small screen devices. You can try to use mobile phone to view the changes of style, such as the top menu (which will become a dropdown menu toggled by a button), toc of articles (which will become full page overlay on the left), and so on.</p>
+<p>Check various styles of article <a href="/%E6%96%87%E7%AB%A0%E5%86%85%E5%AE%B9%E6%95%88%E6%9E%9C%E5%B1%95%E7%A4%BA/">here</a>.</p>
+</div><div class="post-end"><div class="post-prev"><a href="/Meow-%E4%B8%BB%E9%A2%98%E6%8C%87%E5%8D%97/" title="Previous Article"><i class="fa-solid fa-chevron-left fa-lg"></i></a></div><div class="post-reward" onclick="openPostReward()" title="Rewards"><i class="fa-regular fa-thumbs-up fa-xl fa-beat-fade"></i></div><div id="reward-panel" onclick="closePostReward()"><div class="reward-container"><p>If you like this article, welcome to pay me a coffee, thanks&#128151;</p>
+<div class="reward-nav"><div class="reward-item"><img class="reward-img" src="/img/reward/wechat.jpg" title="Wechat" alt="Wechat"/><span>Wechat</span></div><div class="reward-item"><img class="reward-img" src="/img/reward/alipay.jpg" title="Alipay" alt="Alipay"/><span>Alipay</span></div></div></div></div><div class="post-next"><a href="/%E6%96%87%E7%AB%A0%E5%86%85%E5%AE%B9%E6%95%88%E6%9E%9C%E5%B1%95%E7%A4%BA/" title="Next Article"><i class="fa-solid fa-chevron-right fa-lg"></i></a></div></div></article><div id="post-toc"><aside class="toc-aside"><div class="toc-title"><span><i class="fa-solid fa-paw"></i>TOC</span></div><div class="toc-container"><ol class="toc-content"><li class="toc-content-item toc-content-level-2"><a class="toc-content-link" href="#Installation"><span class="toc-content-number">1.</span> <span class="toc-content-text">Installation</span></a><ol class="toc-content-child"><li class="toc-content-item toc-content-level-3"><a class="toc-content-link" href="#Get-The-Theme"><span class="toc-content-number">1.1.</span> <span class="toc-content-text">Get The Theme</span></a></li><li class="toc-content-item toc-content-level-3"><a class="toc-content-link" href="#Apply-The-Theme"><span class="toc-content-number">1.2.</span> <span class="toc-content-text">Apply The Theme</span></a></li><li class="toc-content-item toc-content-level-3"><a class="toc-content-link" href="#Install-Dependency"><span class="toc-content-number">1.3.</span> <span class="toc-content-text">Install Dependency</span></a></li></ol></li><li class="toc-content-item toc-content-level-2"><a class="toc-content-link" href="#Theme-Configuration"><span class="toc-content-number">2.</span> <span class="toc-content-text">Theme Configuration</span></a><ol class="toc-content-child"><li class="toc-content-item toc-content-level-3"><a class="toc-content-link" href="#Search-Function"><span class="toc-content-number">2.1.</span> <span class="toc-content-text">Search Function</span></a></li><li class="toc-content-item toc-content-level-3"><a class="toc-content-link" href="#Special-Pages"><span class="toc-content-number">2.2.</span> <span class="toc-content-text">Special Pages</span></a></li><li class="toc-content-item toc-content-level-3"><a class="toc-content-link" href="#Selectable"><span class="toc-content-number">2.3.</span> <span class="toc-content-text">Selectable</span></a></li><li class="toc-content-item toc-content-level-3"><a class="toc-content-link" href="#TOC"><span class="toc-content-number">2.4.</span> <span class="toc-content-text">TOC</span></a></li><li class="toc-content-item toc-content-level-3"><a class="toc-content-link" href="#Contact"><span class="toc-content-number">2.5.</span> <span class="toc-content-text">Contact</span></a></li></ol></li><li class="toc-content-item toc-content-level-2"><a class="toc-content-link" href="#Language-Configuration"><span class="toc-content-number">3.</span> <span class="toc-content-text">Language Configuration</span></a><ol class="toc-content-child"><li class="toc-content-item toc-content-level-3"><a class="toc-content-link" href="#%E2%80%9CAbout%E2%80%9D-page"><span class="toc-content-number">3.1.</span> <span class="toc-content-text">“About” page</span></a></li></ol></li><li class="toc-content-item toc-content-level-2"><a class="toc-content-link" href="#Fiction-Scaffold"><span class="toc-content-number">4.</span> <span class="toc-content-text">Fiction Scaffold</span></a><ol class="toc-content-child"><li class="toc-content-item toc-content-level-3"><a class="toc-content-link" href="#Apply-Scaffold"><span class="toc-content-number">4.1.</span> <span class="toc-content-text">Apply Scaffold</span></a></li><li class="toc-content-item toc-content-level-3"><a class="toc-content-link" href="#Scaffold-Configuration"><span class="toc-content-number">4.2.</span> <span class="toc-content-text">Scaffold Configuration</span></a><ol class="toc-content-child"><li class="toc-content-item toc-content-level-4"><a class="toc-content-link" href="#Meta"><span class="toc-content-number">4.2.1.</span> <span class="toc-content-text">Meta</span></a></li><li class="toc-content-item toc-content-level-4"><a class="toc-content-link" href="#Status"><span class="toc-content-number">4.2.2.</span> <span class="toc-content-text">Status</span></a></li><li class="toc-content-item toc-content-level-4"><a class="toc-content-link" href="#Summary"><span class="toc-content-number">4.2.3.</span> <span class="toc-content-text">Summary</span></a></li><li class="toc-content-item toc-content-level-4"><a class="toc-content-link" href="#Notes"><span class="toc-content-number">4.2.4.</span> <span class="toc-content-text">Notes</span></a></li></ol></li></ol></li><li class="toc-content-item toc-content-level-2"><a class="toc-content-link" href="#Style-Preview"><span class="toc-content-number">5.</span> <span class="toc-content-text">Style Preview</span></a></li></ol></div></aside><div class="toc-blank" onclick="tocToggle()"></div></div></div></div><div id="tool-bar"><div id="tool-toggle" onclick="toolToggle()" title="Settings"><i class="fa-solid fa-gear"></i></div><div id="toc-toggle" onclick="tocToggle()" title="TOC"><i class="fa-solid fa-list-ul"></i></div><div id="back-to-top" onclick="scrollToTop()" title="Back To Top"><i class="fa-solid fa-chevron-up"></i></div></div><div id="search-panel"><div class="search-container"><div class="search-head"><div class="search-title"><span><i class="fa-solid fa-paw"></i>Search</span></div><div class="search-close-btn" onclick="toggleSearchWindow()"><i class="fa-regular fa-circle-xmark"></i></div></div><div class="search-box"><i class="fa-solid fa-magnifying-glass"></i><input id="search-input" type="text" placeholder="Please enter the content to search..." value=""/></div><div class="search-body"><div id="search-count">Matching results: </div><div id="search-result"></div><div id="search-result-empty">No matching articles were found.</div></div></div></div><footer><div class="footer-content"><div class="copyright-info"><i class="fa-regular fa-copyright fa-xs"></i><span>2024</span><a href="/about">小橘猫</a><i class="fa-solid fa-cat fa-sm"></i><span>Powered by</span><a href="https://hexo.io/" target="_blank">Hexo</a><span> &amp;</span><a href="https://github.com/chanwj/hexo-theme-meow" target="_blank" title="v1.0.0">Theme Meow</a></div><div class="pageview-site"><span id="busuanzi_container_site_pv">Total hits : <span id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner"></i></span></span><span id="busuanzi_container_site_uv">Total visitors : <span id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner"></i></span></span></div></div></footer>
+
+<script src="/js/theme/tool-bar.js"></script>
+
+
+<script src="/js/theme/menu.js"></script>
+
+<script src="/js/theme/reward.js"></script>
+
+<script src="/js/jquery-3.7.1.min.js"></script>
+
+
+<script src="/js/theme/search.js"></script>
+<script>var search_path = 'search.xml';
+if (search_path.length == 0) {
+  search_path = "search.xml";
+}
+var path = '/' + search_path;
+searchFunc(path, 'search-input', 'search-result');</script></body></html>
