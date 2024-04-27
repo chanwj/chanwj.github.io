@@ -641,6 +641,13 @@ blockquote p {
   margin: 1em 5px;
   line-height: 2em;
 }
+blockquote.ql {
+  background-color: transparent;
+  box-shadow: none;
+  border-left-color: #d7d7d7;
+  color: #8d8d8d;
+  line-height: 2em;
+}
 ul {
   padding-left: 1em;
   line-height: 1.8em;
@@ -648,6 +655,10 @@ ul {
 ol {
   padding-left: 1em;
   line-height: 1.8em;
+}
+input[type='checkbox']:disabled {
+  width: 15px;
+  height: 15px;
 }
 table {
   margin: 1.5em 0;
