@@ -1168,6 +1168,9 @@ details[open] summary {
   vertical-align: super;
   font-size: 14px;
 }
+html {
+  scroll-behavior: smooth;
+}
 html *::-webkit-scrollbar {
   width: 10px;
 }
@@ -1192,7 +1195,6 @@ html *::-webkit-scrollbar-track {
 }
 body {
   background-color: #ffdf6a;
-  scroll-behavior: smooth;
   margin: 0;
   padding: 0;
   font-size: 18px;
