@@ -1,0 +1,403 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="author" content="小橘猫"/><meta name="keyword" content="Hexo,Theme,Meow,博客,开源"/><meta name="description" content="本指南详细介绍了 Hexo 主题「Meow」的安装与配置方法，包括主题下载、依赖项安装、关键配置的修改以及其它特色配置的使用说明，供大家参考使用。 点击右下角悬浮工具栏上的目录按钮可以打开&#x2F;关闭标题导航，方便直达需要查看的内容。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="「Meow」主题指南">
+<meta property="og:url" content="https://chanwj.github.io/Meow-Theme-Guide/index.html">
+<meta property="og:site_name" content="MEOW">
+<meta property="og:description" content="本指南详细介绍了 Hexo 主题「Meow」的安装与配置方法，包括主题下载、依赖项安装、关键配置的修改以及其它特色配置的使用说明，供大家参考使用。 点击右下角悬浮工具栏上的目录按钮可以打开&#x2F;关闭标题导航，方便直达需要查看的内容。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-10-13T14:13:43.000Z">
+<meta property="article:modified_time" content="2024-10-20T07:11:36.514Z">
+<meta property="article:author" content="小橘猫">
+<meta property="article:tag" content="教程">
+<meta name="twitter:card" content="summary"><title>「Meow」主题指南 - MEOW - 可爱明亮的Hexo主题</title><link rel="shortcut icon" href="/img/site-icon.png">
+<link rel="stylesheet" href="/css/style.css" id="dm-light">
+
+
+<link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+<script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script>
+
+<link rel="stylesheet" href="/css/third-party/APlayer.min.css">
+
+
+<script src="/js/third-party/APlayer.min.js"></script>
+</head><body><header><div class="top-nav" ondblclick="scrollToTop()"><div class="nav-info"><div class="nav-icon"><img id="nav-icon" src="/img/site-icon.png"/></div><div class="nav-title"><a id="nav-title" href="/" title="主页">MEOW</a></div></div><div class="nav-ribbon"><div class="top-menu-expanded"><a class="top-menu-item" href="/archives"><span>归档</span></a><a class="top-menu-item" href="/categories"><span>分类</span></a><a class="top-menu-item" href="/tags"><span>标签</span></a><a class="top-menu-item" href="/about"><span>关于</span></a></div><div class="top-search" onclick="toggleSearchWindow()"><div id="top-search-btn" title="搜索"><i class="icon fa-solid fa-magnifying-glass"></i><span>搜索</span></div></div><div id="top-menu-btn" onclick="openTopMenu()" title="打开菜单"><i class="fa-solid fa-bars fa-lg"></i></div></div></div></header><div id="top-menu-hidden"><div class="menu-hidden-content"><div class="menu-hidden-nav"><a class="menu-hidden-item" href="/archives"><i class="fa-solid fa-box-archive fa-sm"></i><span>归档</span></a><a class="menu-hidden-item" href="/categories"><i class="fa-regular fa-folder-open fa-sm"></i><span>分类</span></a><a class="menu-hidden-item" href="/tags"><i class="fa-solid fa-tags fa-sm"></i><span>标签</span></a><a class="menu-hidden-item" href="/about"><i class="fa-solid fa-paw fa-sm"></i><span>关于</span></a></div></div><div class="menu-hidden-blank" onclick="closeTopMenu()"></div></div>
+<div class="blog-info"><div class="blog-pic"><img id="blog-pic" src="/img/site-icon.png"/></div><div class="blog-title"><i class="fa-solid fa-paw fa-2xs fa-rotate-by"></i><span>MEOW</span><i class="fa-solid fa-paw fa-2xs fa-rotate-by"></i></div><div class="blog-desc">Hexo主题「Meow」展示站。本主题尤其适用于发布原创小说、同人二创等文学作品。</div></div><div class="main"><div class="main-content"><article class="post"><div class="post-title"><h1><i class="fa-solid fa-paw"></i>「Meow」主题指南</h1></div><div class="post-info"><div class="post-info-first-line"><div class="post-date"><i class="icon fa-regular fa-calendar-plus" title="发布日期"></i><time class="publish-time">2024-10-13</time><i class="icon fa-regular fa-calendar-check" title="更新日期"></i><time class="update-time">2024-10-20</time></div>
+<div class="post-categories"><i class="icon fa-regular fa-folder-open" title="分类"></i><a class="post-category" href="/categories/Hexo/">Hexo</a><i class="icon fa-regular fa-folder-open" title="分类"></i><a class="post-category" href="/categories/Hexo/Theme-Meow/">Theme Meow</a></div>
+<div class="post-tags"><i class="icon fa-solid fa-tags" title="标签"></i><a class="post-tag" href="/tags/%E6%95%99%E7%A8%8B/">教程</a></div></div><div class="post-info-second-line"><div class="post-copyright"><i class="icon fa-brands fa-creative-commons" title="版权声明"></i><span>版权声明: </span><a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh-hans" title="CC BY-NC-ND 4.0">署名-非商业性使用-禁止演绎 4.0</a></div>
+<div class="post-word-count"><i class="icon fa-solid fa-pen-to-square"></i><span>全文约4.2K字</span></div><div class="pageview-post"><i class="icon fa-regular fa-eye"></i><span id="busuanzi_container_page_pv">阅读次数: <span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner"></i></span></span></div></div></div><div class="post-content"><p>本指南详细介绍了 Hexo 主题<a target="_blank" rel="noopener" href="https://github.com/chanwj/hexo-theme-meow">「Meow」</a>的安装与配置方法，包括主题下载、依赖项安装、关键配置的修改以及其它特色配置的使用说明，供大家参考使用。</p>
+<p>点击右下角悬浮工具栏上的目录按钮可以打开&#x2F;关闭标题导航，方便直达需要查看的内容。</p>
+<span id="more"></span>
+
+<br/>
+
+<h2 id="安装指南"><a href="#安装指南" class="headerlink" title="安装指南"></a>安装指南</h2><h3 id="获取主题"><a href="#获取主题" class="headerlink" title="获取主题"></a>获取主题</h3><p>在博客根目录下执行以下指令。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> -b master https://github.com/chanwj/hexo-theme-meow.git themes/meow</span><br></pre></td></tr></table></figure>
+<br/>
+
+<h3 id="应用主题"><a href="#应用主题" class="headerlink" title="应用主题"></a>应用主题</h3><p>修改博客根目录下的<code>_config.yml</code>配置文件，将主题更换为<code>meow</code>。</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">theme:</span> <span class="string">meow</span></span><br></pre></td></tr></table></figure>
+<br/>
+
+<h3 id="安装依赖项"><a href="#安装依赖项" class="headerlink" title="安装依赖项"></a>安装依赖项</h3><p>本主题使用pug进行渲染，请提前安装pug渲染器。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-renderer-pug --save</span><br></pre></td></tr></table></figure>
+
+<br/>
+
+<hr>
+<br/>
+
+<h2 id="主题配置指南"><a href="#主题配置指南" class="headerlink" title="主题配置指南"></a>主题配置指南</h2><p>请在主题目录下的<code>_config.yml</code>文件中对主题配置进行修改。</p>
+<p>主题配置文件中包含中英双语的注释，简单易用，<strong>部分特殊配置请参考以下内容</strong>。</p>
+<p>（提示：在每次更新主题之前，建议备份主题配置文件，以免自定义的内容丢失。）</p>
+<br/>
+
+<h3 id="特殊页面"><a href="#特殊页面" class="headerlink" title="特殊页面"></a>特殊页面</h3><p>本主题为“分类汇总、标签汇总、关于”这三个页面做了layout模版，如需展示这些页面，请执行以下指令来新增对应页面。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo new page categories</span><br><span class="line">hexo new page tags</span><br><span class="line">hexo new page about</span><br></pre></td></tr></table></figure>
+
+<p>接着在<code>source</code>目录下找到对应的页面文件夹，打开其中的<code>index.md</code>，在顶部的Front-matter信息中增加layout参数，参数值修改为页面对应的值。</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">layout:</span> <span class="comment"># categories | tags | about</span></span><br></pre></td></tr></table></figure>
+
+<br/>
+
+<h3 id="TOC目录"><a href="#TOC目录" class="headerlink" title="TOC目录"></a>TOC目录</h3><p>本主题支持生成文章目录，功能开关由以下配置决定。</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">toc:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<p>当TOC功能打开时，默认为所有文章生成目录。如果某些文章不需要生成目录，可以在对应的文章文件的顶部Front-matter信息中单独关闭该项功能。</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">toc:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+
+<br/>
+
+<h3 id="联系方式"><a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h3><p>“关于”页中的联系方式由<code>contact_info</code>项配置。以下列出的是默认支持的选项，可以自动显示对应的网站图标。对于不需要显示的联系方式，将值置空即可。</p>
+<ul>
+<li>Email|邮箱</li>
+<li>Github</li>
+<li>Twitter</li>
+<li>Facebook</li>
+<li>Instagram</li>
+<li>Tiktok|抖音</li>
+<li>Bilibili</li>
+<li>Weibo|微博</li>
+<li>Mastodon</li>
+<li>Wechat|公众号</li>
+</ul>
+<p>注：带有中文的选项意味着配置中文或者英文都可以被识别和显示。</p>
+<p>补充说明：</p>
+<ul>
+<li>如需新增其它联系方式，请按照格式<code>name: url</code>进行配置。注意：自定义的联系方式图标均为统一的猫爪图案。</li>
+<li>Email|邮箱：与其它选项不同，参数值为邮箱地址。</li>
+<li>Wechat|公众号：与其它选项不同，参数值为公众号名称。</li>
+</ul>
+<br/>
+
+<h3 id="网站背景"><a href="#网站背景" class="headerlink" title="网站背景"></a>网站背景</h3><p>本主题支持自定义网站背景，具体配置项如下所示，可以选择使用图片、纯色或者渐变色。</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">background:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="number">2</span></span><br><span class="line">  <span class="attr">color:</span> <span class="string">&#x27;MistyRose&#x27;</span></span><br><span class="line">  <span class="attr">image_url:</span> <span class="string">img/Spiritfarer-1.png</span></span><br><span class="line">  <span class="attr">gradient:</span> <span class="string">linear-gradient(to</span> <span class="string">bottom</span> <span class="string">right,#ffa751,#ffe259)</span></span><br></pre></td></tr></table></figure>
+
+<div class="table-center">
+
+<table>
+<thead>
+<tr>
+<th align="center">配置项</th>
+<th align="center">名称</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">type</td>
+<td align="center">背景类型</td>
+<td><ul><li>1：图片</li><li>2：纯色（默认）</li><li>3：渐变色</li></ul></td>
+</tr>
+<tr>
+<td align="center">color</td>
+<td align="center">背景颜色</td>
+<td>默认为明黄色<ul><li>css颜色名称，比如：<code>&#39;MistyRose&#39;</code></li><li>颜色代码，比如：<code>&#39;#FFE4E1&#39;</code></li></ul>注：需要将颜色值用<code>&#39; &#39;</code>包裹起来</td>
+</tr>
+<tr>
+<td align="center">image_url</td>
+<td align="center">背景图片路径</td>
+<td>示例：img&#x2F;Spiritfarer-1.png<br/>注意，最前面不需要加<code>/</code></td>
+</tr>
+<tr>
+<td align="center">gradient</td>
+<td align="center">渐变语句</td>
+<td>使用CSS语法，示例：<code>linear-gradient(to bottom right,#ffa751,#ffe259)</code></td>
+</tr>
+</tbody></table>
+</div>
+
+<br/>
+
+<h3 id="网站字体"><a href="#网站字体" class="headerlink" title="网站字体"></a>网站字体</h3><p>本主题支持自定义网站字体，具体配置位于<code>font</code>项之中。目前仅支持导入字体链接，比如谷歌字体库链接。</p>
+<p>请使用数组的形式添加字体链接，格式为<code>- url</code>。</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">font:</span></span><br><span class="line">  <span class="attr">url_list:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">&#x27;https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400..700&amp;display=swap&#x27;</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">&#x27;https://fonts.googleapis.com/css2?family=Noto+Serif&amp;display=swap&#x27;</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">&#x27;https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300..700&amp;display=swap&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p>配置好字体链接后，还需要配置字体名称，顺序靠前的字体将被优先使用。注意：配置多个字体时请用双引号将全部字体包裹起来，逗号分隔不同字体。建议除导入的外链字体外再配置一些默认字体。</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">font_family:</span> <span class="string">&quot;&#x27;Noto Sans SC&#x27;, &#x27;Noto Serif&#x27;, &#x27;Noto Serif SC&#x27;, &#x27;PingFang SC&#x27;, &#x27;Microsoft YaHei&#x27;, Sans-serif, Serif&quot;</span></span><br></pre></td></tr></table></figure>
+
+<br/>
+
+<h3 id="深色模式"><a href="#深色模式" class="headerlink" title="深色模式"></a>深色模式</h3><p>本主题支持从右下角的悬浮工具栏处切换深色模式（先点击齿轮图标展开更多工具栏，然后点击深色模式图标）。</p>
+<p>此功能的实现依赖<code>nickdeny/darkmode.js</code>。在此基础上，主题作者进行了修改，使之更加兼容适配本主题。与此同时，本主题还为深色模式增加了一些额外特性，比如：评论区主题跟随模式切换、动态切换效果。</p>
+<p>如需开启深色模式功能，请在主题目录下的<code>_config.yml</code>文件中将相关配置打开。</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># darkmode 深色模式</span></span><br><span class="line"><span class="attr">darkmode:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">start_at:</span> <span class="number">24</span><span class="string">:00</span> <span class="comment"># time to start dark theme 自动切换深色模式的开始时间</span></span><br><span class="line">  <span class="attr">end_at:</span> <span class="number">06</span><span class="string">:00</span> <span class="comment"># time to end dark theme 自动切换深色模式的结束时间</span></span><br><span class="line">  <span class="attr">check_system_scheme:</span> <span class="literal">false</span> <span class="comment"># check if system indicates light or dark color themes 检查系统是否指定模式</span></span><br><span class="line">  <span class="attr">save_on_toggle:</span> <span class="literal">true</span> <span class="comment"># save current mode in local storage 在本地保存现有模式</span></span><br></pre></td></tr></table></figure>
+
+<br/>
+
+<h3 id="搜索功能"><a href="#搜索功能" class="headerlink" title="搜索功能"></a>搜索功能</h3><p>搜索功能的实现依赖<code>hexo-generator-search</code>插件。因此，如需装配搜索功能，请先安装此依赖项。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-search --save</span><br></pre></td></tr></table></figure>
+
+<p>第二步，在根目录下的<code>_config.yml</code>文件里添加以下这段配置（具体含义可查看<a target="_blank" rel="noopener" href="https://github.com/wzpan/hexo-generator-search">hexo-generator-search</a>的介绍）。</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Search function</span></span><br><span class="line"><span class="attr">search:</span></span><br><span class="line">  <span class="attr">path:</span> <span class="string">search.xml</span></span><br><span class="line">  <span class="attr">field:</span> <span class="string">post</span></span><br><span class="line">  <span class="attr">content:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">template:</span> <span class="string">./search.xml</span></span><br></pre></td></tr></table></figure>
+
+<p>第三步，在根目录下的<code>node_modules</code>文件夹中找到<code>hexo-generator-search</code>文件夹，再进入其中的<code>templates</code>文件夹，将构建搜索内容xml的模板文件<code>search.xml</code>复制到博客根目录下。</p>
+<p>第四步，在主题目录下的<code>_config.yml</code>文件中将搜索功能打开。</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">search:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<p>将此配置修改为<code>false</code>可随时关闭搜索功能，包括不显示搜索入口、不引入搜索相关的js、不构建搜索内容xml。</p>
+<br/>
+
+<h3 id="评论功能"><a href="#评论功能" class="headerlink" title="评论功能"></a>评论功能</h3><p>评论功能的实现依赖<code>giscus</code>，<code>giscus</code>是一个利用 GitHub Discussions 实现的评论系统，网站管理者和访客都可以借助Github账号在网站上给出留言和反应。</p>
+<p>如需启用评论功能，请在主题目录下的<code>_config.yml</code>文件中将评论功能打开。</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">comment:</span></span><br><span class="line">  <span class="attr">post_enable:</span> <span class="literal">true</span> <span class="comment"># 在文章页面增加评论模块</span></span><br><span class="line">  <span class="attr">about_enable:</span> <span class="literal">true</span> <span class="comment"># 在关于页增加评论模块</span></span><br></pre></td></tr></table></figure>
+
+<p><code>comment</code>项下还有一系列配置项，具体的含义以及配置值请前往<a target="_blank" rel="noopener" href="https://giscus.app/">giscus</a>官方网站根据指引获取。</p>
+<p>请注意，使用<code>giscus</code>需要进行一些前置操作，包括公开仓库、安装giscus app以及在仓库启用Discussions，详情请参考<a target="_blank" rel="noopener" href="https://giscus.app/">giscus</a>官方网站的指南。</p>
+<p>文章评论功能启用后，默认为所有文章添加评论模块。如果需要给某篇文章关闭评论区，可以在该文章的顶部Front-matter信息中单独关闭该项功能。</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">comments:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+
+<p>这里有一篇文章单独关闭了评论区，点击<a href="/Post-Style-Display/">此处</a>查看效果。</p>
+<br/>
+
+<hr>
+<br/>
+
+<h2 id="语言配置指南"><a href="#语言配置指南" class="headerlink" title="语言配置指南"></a>语言配置指南</h2><p>本主题配备了中英两种语言可供选择，如需切换网站界面语言显示，可在根目录下的<code>_config.yml</code>中进行设置。</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">language:</span> <span class="string">zh-CN</span> <span class="comment"># 中文：zh-CN | 英文：en</span></span><br></pre></td></tr></table></figure>
+
+<p>另外，针对不同的文章或页面，可以单独在文章&#x2F;页面的Front-matter信息中进行语言设置。</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">lang:</span> <span class="string">en</span></span><br></pre></td></tr></table></figure>
+
+<p>如果需要自定义界面上的各项显示值，可以在主题目录下的<code>languages</code>文件夹中找到对应的语言文件，然后修改对应的参数。</p>
+<p>语言文件同样包含了注释，可直观了解到每一项的作用以及配置方法。</p>
+<br/>
+
+<h3 id="“关于”页面"><a href="#“关于”页面" class="headerlink" title="“关于”页面"></a>“关于”页面</h3><p>需要特别注意的是，本主题制作了“关于”页的layout模板。为了方便进行国际化多语言适配，“关于”页中的很多项显示值均集成到了语言文件中进行配置。</p>
+<p>点此查看英文版“关于”页面：<a href="/en/about">About</a></p>
+<br/>
+
+<hr>
+<br/>
+
+<h2 id="小说模板"><a href="#小说模板" class="headerlink" title="小说模板"></a>小说模板</h2><p>本主题针对文学创作进行了优化，方便各位作者使用模板发表原创作品，包括长篇连载小说、同人作品等。</p>
+<p>应用小说模板后的文章样式请点击<a href="/Godzilla-King-Of-The-Monsters/">此处</a>进行查看。</p>
+<br/>
+
+<h3 id="应用模板"><a href="#应用模板" class="headerlink" title="应用模板"></a>应用模板</h3><p>请将主题目录下的<code>fiction.md</code>（小说模板文件）复制到博客根目录下的<code>scaffolds</code>文件夹中。以后每当需要生成新的文学作品文件时，可以使用以下指令来指定模板。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new fiction <span class="string">&quot;article&#x27;s title&quot;</span></span><br></pre></td></tr></table></figure>
+
+<br/>
+
+<h3 id="模板配置"><a href="#模板配置" class="headerlink" title="模板配置"></a>模板配置</h3><p><code>fiction.md</code>自带了一系列Front-matter参数，每一项都配有注释说明。</p>
+<p>其中，<code>layout: post</code>和<code>type: fiction</code>是固定配置，请勿更改。</p>
+<p>另外，小说模板的参数可以通过语言文件中的<code>fiction</code>模块进行显示值配置。</p>
+<br/>
+
+<h4 id="文章属性"><a href="#文章属性" class="headerlink" title="文章属性"></a>文章属性</h4><p>文章的meta信息模块可通过<code>meta_show: true</code>配置来展示。</p>
+<p>具体的属性在<code>meta_info</code>项中配置，小说模板目前支持以下meta信息的填写。</p>
+<ul>
+<li><strong>type</strong></li>
+</ul>
+<p>文章的类型，比如：原创小说 &#x2F; 同人作品 &#x2F; ……</p>
+<ul>
+<li><strong>fandom</strong></li>
+</ul>
+<p>原型&#x2F;原作，一般只有当文章类型为“同人作品”时才需要指明。如果不需要显示原作信息，请把此项置空。</p>
+<ul>
+<li><strong>relationship</strong></li>
+</ul>
+<p>文章涉及的角色关系，一般填写CP，也可以填写重要的亲情、友情关系等。如果不需要显示关系则把此项置空即可。</p>
+<ul>
+<li><strong>character</strong></li>
+</ul>
+<p>文章中出现的重要角色。如果不需要显示角色信息，把此项置空即可。</p>
+<ul>
+<li><strong>rating</strong></li>
+</ul>
+<p>文章的分级，此配置项只能选填以下值：</p>
+<table>
+<thead>
+<tr>
+<th>分级</th>
+<th>说明</th>
+<th>特殊样式</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>General</td>
+<td>适合全年龄段读者，无警告</td>
+<td>无</td>
+</tr>
+<tr>
+<td>Teen</td>
+<td>建议青少年及以上读者阅读</td>
+<td>字体加粗</td>
+</tr>
+<tr>
+<td>Mature</td>
+<td>成人级，一般指文章含有轻微的、非详细的限制级内容</td>
+<td>字体加粗且显示为红色</td>
+</tr>
+<tr>
+<td>Explicit</td>
+<td>限制级，一般指文章含有暴力、色情等成人主题相关的详细描写</td>
+<td>字体加粗且显示为红色</td>
+</tr>
+</tbody></table>
+<p>如果不需要显示分级信息，把此项置空即可。</p>
+<ul>
+<li><strong>warning</strong></li>
+</ul>
+<p>预警信息，也就是读者应该在阅读正文前应该知悉的内容，防止读者被创到，比如：主要角色死亡、血腥暴力描写、病娇要素……</p>
+<p>此项内容会醒目地显示为红色加粗字体。如果不需要显示预警，或者不希望剧透，可以将此项置空。</p>
+<br/>
+
+<h4 id="完结状态"><a href="#完结状态" class="headerlink" title="完结状态"></a>完结状态</h4><p><code>status</code>用于标记这篇文章是否已完结，并在正文的最后显示相应的提示。此配置项有两个值可供选填：</p>
+<table>
+<thead>
+<tr>
+<th align="center">完结状态</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">Y</td>
+<td>已完结（v1.0.0中选项值为complete）</td>
+</tr>
+<tr>
+<td align="center">N</td>
+<td>连载中 &#x2F; 未完待续（v1.0.0中选项值为inProgress）</td>
+</tr>
+</tbody></table>
+<p>（注：新版兼容v1.0.0的完结状态选项，因此以前发布的文章无须进行修改）</p>
+<p>如果不需要显示完结状态，把此项置空即可。</p>
+<br/>
+
+<h4 id="文章简介"><a href="#文章简介" class="headerlink" title="文章简介"></a>文章简介</h4><p><code>summary</code>用于填写文章的简要介绍，支持Markdown语法。如果简介比较复杂，请使用引号将内容包裹起来。如果不需要显示简介，请将此项置空。</p>
+<p>在文章未指定摘要内容的情况下，主题会自动检测使用小说模板的文章是否填写了简介，如果存在简介，则这篇文章在首页和归档页会显示简介内容作为摘要。</p>
+<br/>
+
+<h4 id="作者的话"><a href="#作者的话" class="headerlink" title="作者的话"></a>作者的话</h4><p>作者的话可以写在正文前和正文后，分别填写在<code>notes_before</code>和<code>notes_after</code>项中，可以对文章进行补充介绍与说明，也可以发表一些作者的感想或者想对读者说的话。</p>
+<p>支持Markdown语法。如果内容比较复杂，请使用引号将内容包裹起来。如果不需要显示作者的话，请将参数值置空。</p>
+<br/>
+
+<hr>
+<br/>
+
+<h2 id="特色功能"><a href="#特色功能" class="headerlink" title="特色功能"></a>特色功能</h2><h3 id="引用块"><a href="#引用块" class="headerlink" title="引用块"></a>引用块</h3><p>本主题支持多种风格的引用块，可以在文章中使用相应标签来调用，具体使用方法如下。</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="quote">&gt; 使用Markdown的`&gt;`可调用默认样式的引用块</span></span><br><span class="line"></span><br><span class="line">&#123;% quote light %&#125;</span><br><span class="line">淡色 Light</span><br><span class="line">&#123;% endquote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% quote pink %&#125;</span><br><span class="line">粉色 Pink</span><br><span class="line">&#123;% endquote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% quote red %&#125;</span><br><span class="line">红色 Red</span><br><span class="line">&#123;% endquote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% quote blue %&#125;</span><br><span class="line">蓝色 Blue</span><br><span class="line">&#123;% endquote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% quote green %&#125;</span><br><span class="line">绿色 Green</span><br><span class="line">&#123;% endquote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% quote %&#125;</span><br><span class="line">默认 Default</span><br><span class="line">&#123;% endquote %&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>使用Markdown的<code>&gt;</code>可调用默认样式的引用块</p>
+</blockquote>
+<blockquote class="light">淡色 Light</blockquote>
+
+<blockquote class="pink">粉色 Pink</blockquote>
+
+<blockquote class="red">红色 Red</blockquote>
+
+<blockquote class="blue">蓝色 Blue</blockquote>
+
+<blockquote class="green">绿色 Green</blockquote>
+
+<blockquote>默认 Default</blockquote>
+
+<br/>
+
+<h3 id="选取文本"><a href="#选取文本" class="headerlink" title="选取文本"></a>选取文本</h3><p>本主题支持对用户是否能够直接选取网站上的文本内容进行配置。true: 可选取，false: 不可选取。</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">selectable:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<p>注：此功能仅为君子协议，无法阻止爬虫扒网页源码等方式获取文本内容。</p>
+<br/>
+
+<h3 id="段首缩进"><a href="#段首缩进" class="headerlink" title="段首缩进"></a>段首缩进</h3><p>如果想让文章内容自动在段落首行缩进两字符，可以在主题目录下的<code>_config.yml</code>文件中打开对应的配置。</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">text_indent:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<p>注：打开段首缩进功能后，小说模板中的模块（简介与作者的话）也会有缩进效果。</p>
+<p>此配置为全局配置，如果想为某篇文章单独关闭或开启段首缩进功能，请在文章顶部的Front-matter信息中进行设置。</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">indent:</span> <span class="literal">true</span> <span class="comment"># true | false</span></span><br></pre></td></tr></table></figure>
+
+<p>本展示站默认全局关闭缩进功能，但给<a href="/Godzilla-King-Of-The-Monsters/">这篇文章</a>单独设置了开启缩进，可点击前往查看效果。</p>
+<br/>
+
+<h3 id="加密功能"><a href="#加密功能" class="headerlink" title="加密功能"></a>加密功能</h3><p>加密功能的实现依赖<code>hexo-blog-encrypt</code>插件。因此，如需装配文章加密功能，请先安装此依赖项。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-blog-encrypt --save</span><br></pre></td></tr></table></figure>
+
+<p>使用<code>hexo-blog-encrypt</code>后可以对某篇文章单独加密或者对整个标签下的文章加密，还可以更换加密元素的主题，具体配置方法详见<a target="_blank" rel="noopener" href="https://github.com/D0n9X1n/hexo-blog-encrypt/blob/master/ReadMe.zh.md">hexo-blog-encrypt文档</a>说明。</p>
+<p>本主题已对加密功能进行优化适配，加密文章的TOC目录会同步隐藏，直到解密后才可见。</p>
+<p>点击查看<a href="/Test-Encrypt-Tag">示例加密文章</a>，<a href="/Test-Encrypt-Fiction">示例加密小说</a>，密码都是meow。</p>
+<br/>
+
+<h3 id="404页面"><a href="#404页面" class="headerlink" title="404页面"></a>404页面</h3><p>如需使用本主题内置的统一风格404页面，请执行以下步骤。</p>
+<p>首先新增404页面。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page 404</span><br></pre></td></tr></table></figure>
+
+<p>然后打开<code>source/404</code>目录下的<code>index.md</code>，在顶部的Front-matter信息中修改<code>layout</code>项为404，并新增<code>permalink</code>项。</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">title:</span> <span class="number">404</span> <span class="string">Not</span> <span class="string">Found</span> <span class="comment"># 可自定义404页面的标题</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2024-04-01 20:01:10</span> <span class="comment"># 日期时间会自动生成</span></span><br><span class="line"><span class="attr">layout:</span> <span class="number">404</span> <span class="comment"># 填写404才能使404页面效果生效</span></span><br><span class="line"><span class="attr">permalink:</span> <span class="string">/404</span> <span class="comment"># 指定404页面的永久链接路径，使404.html最终生成在网站根目录下</span></span><br></pre></td></tr></table></figure>
+
+<p>提示：可在语言配置文件中修改404页面的提示语。</p>
+<br/>
+
+<h3 id="音乐播放器"><a href="#音乐播放器" class="headerlink" title="音乐播放器"></a>音乐播放器</h3><p>本主题增加了对<code>APlayer</code>的支持，点击查看<a href="/Post-Style-Display/#%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8">示例效果</a>。</p>
+<p>如需使用此音乐播放器，请先在主题目录下的<code>_config.yml</code>文件中将相关配置打开。</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">aplayer:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<p>然后，在需要添加音乐播放器的文章中，添加如下代码：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;aplayer&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">  <span class="keyword">const</span> ap = <span class="keyword">new</span> <span class="title class_">APlayer</span>(&#123;</span></span><br><span class="line"><span class="language-javascript">    <span class="attr">container</span>: <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;aplayer&#x27;</span>),</span></span><br><span class="line"><span class="language-javascript">    <span class="attr">audio</span>: [&#123;</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">name</span>: <span class="string">&#x27;name&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">artist</span>: <span class="string">&#x27;artist&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">url</span>: <span class="string">&#x27;url.mp3&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">cover</span>: <span class="string">&#x27;cover.jpg&#x27;</span></span></span><br><span class="line"><span class="language-javascript">    &#125;]</span></span><br><span class="line"><span class="language-javascript">  &#125;);</span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>其中，<code>APlayer</code>的参数请参考<a target="_blank" rel="noopener" href="https://aplayer.js.org/#/zh-Hans/">APlayer官方文档</a>的说明进行自定义配置。</p>
+<p><strong>备注：</strong>由于<code>APlayer</code>与Hexo的TOC功能存在冲突（具体问题可前往APlayer Github仓库的Issues栏目搜索查询），会导致中文标题无法正常跳转，本主题做了一些优化适配，使问题得以解决。</p>
+<br/>
+
+<hr>
+<br/>
+
+<h2 id="效果展示"><a href="#效果展示" class="headerlink" title="效果展示"></a>效果展示</h2><p>本站为展示「Meow」主题而生，您可以在站内观看到本主题不同页面的样式，也可以观察各种功能的应用效果。</p>
+<p>另外，本主题针对小屏设备进行了响应式设计，您可以尝试切换移动设备或者使用浏览器的设备工具查看主题的变化，比如顶部菜单栏变成了按钮下拉式显示，文章TOC目录变成了左侧覆盖显示，等等。</p>
+<p>各种常见的文章元素效果详见《<a href="/Post-Style-Display/">文章内容效果展示</a>》。</p>
+</div><div class="post-end"><div class="post-prev"><a href="/Changelog/" title="上一篇文章"><i class="fa-solid fa-chevron-left fa-lg"></i></a></div><div class="post-reward" onclick="openPostReward()" title="赞赏"><i class="fa-regular fa-thumbs-up fa-xl fa-beat-fade"></i></div><div id="reward-panel" onclick="closePostReward()"><div class="reward-container"><p>如果您喜欢这篇文章，欢迎赞赏支持作者，谢谢&#128151;</p>
+<div class="reward-nav"><div class="reward-item"><img class="reward-img" src="/img/reward/wechat.jpg" title="Wechat" alt="Wechat"/><span>Wechat</span></div><div class="reward-item"><img class="reward-img" src="/img/reward/alipay.jpg" title="Alipay" alt="Alipay"/><span>Alipay</span></div></div></div></div><div class="post-next"><a href="/en/Meow-Theme-Guide/" title="下一篇文章"><i class="fa-solid fa-chevron-right fa-lg"></i></a></div></div></article><div class="comment" id="comment"><script src="https://giscus.app/client.js" data-repo="chanwj/chanwj.github.io" data-repo-id="R_kgDOLouorw" data-category="General" data-category-id="DIC_kwDOLouor84CjIR0" data-mapping="pathname" data-strict="1" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="zh-CN" data-loading="lazy" crossorigin="anonymous" async="async"></script></div><div id="post-toc"><aside class="toc-aside"><div class="toc-title"><span><i class="fa-solid fa-paw"></i>目录</span></div><div class="toc-container" id="toc-body"><ol class="toc-content"><li class="toc-content-item toc-content-level-2"><a class="toc-content-link" href="#%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97"><span class="toc-content-number">1.</span> <span class="toc-content-text">安装指南</span></a><ol class="toc-content-child"><li class="toc-content-item toc-content-level-3"><a class="toc-content-link" href="#%E8%8E%B7%E5%8F%96%E4%B8%BB%E9%A2%98"><span class="toc-content-number">1.1.</span> <span class="toc-content-text">获取主题</span></a></li><li class="toc-content-item toc-content-level-3"><a class="toc-content-link" href="#%E5%BA%94%E7%94%A8%E4%B8%BB%E9%A2%98"><span class="toc-content-number">1.2.</span> <span class="toc-content-text">应用主题</span></a></li><li class="toc-content-item toc-content-level-3"><a class="toc-content-link" href="#%E5%AE%89%E8%A3%85%E4%BE%9D%E8%B5%96%E9%A1%B9"><span class="toc-content-number">1.3.</span> <span class="toc-content-text">安装依赖项</span></a></li></ol></li><li class="toc-content-item toc-content-level-2"><a class="toc-content-link" href="#%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97"><span class="toc-content-number">2.</span> <span class="toc-content-text">主题配置指南</span></a><ol class="toc-content-child"><li class="toc-content-item toc-content-level-3"><a class="toc-content-link" href="#%E7%89%B9%E6%AE%8A%E9%A1%B5%E9%9D%A2"><span class="toc-content-number">2.1.</span> <span class="toc-content-text">特殊页面</span></a></li><li class="toc-content-item toc-content-level-3"><a class="toc-content-link" href="#TOC%E7%9B%AE%E5%BD%95"><span class="toc-content-number">2.2.</span> <span class="toc-content-text">TOC目录</span></a></li><li class="toc-content-item toc-content-level-3"><a class="toc-content-link" href="#%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F"><span class="toc-content-number">2.3.</span> <span class="toc-content-text">联系方式</span></a></li><li class="toc-content-item toc-content-level-3"><a class="toc-content-link" href="#%E7%BD%91%E7%AB%99%E8%83%8C%E6%99%AF"><span class="toc-content-number">2.4.</span> <span class="toc-content-text">网站背景</span></a></li><li class="toc-content-item toc-content-level-3"><a class="toc-content-link" href="#%E7%BD%91%E7%AB%99%E5%AD%97%E4%BD%93"><span class="toc-content-number">2.5.</span> <span class="toc-content-text">网站字体</span></a></li><li class="toc-content-item toc-content-level-3"><a class="toc-content-link" href="#%E6%B7%B1%E8%89%B2%E6%A8%A1%E5%BC%8F"><span class="toc-content-number">2.6.</span> <span class="toc-content-text">深色模式</span></a></li><li class="toc-content-item toc-content-level-3"><a class="toc-content-link" href="#%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD"><span class="toc-content-number">2.7.</span> <span class="toc-content-text">搜索功能</span></a></li><li class="toc-content-item toc-content-level-3"><a class="toc-content-link" href="#%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD"><span class="toc-content-number">2.8.</span> <span class="toc-content-text">评论功能</span></a></li></ol></li><li class="toc-content-item toc-content-level-2"><a class="toc-content-link" href="#%E8%AF%AD%E8%A8%80%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97"><span class="toc-content-number">3.</span> <span class="toc-content-text">语言配置指南</span></a><ol class="toc-content-child"><li class="toc-content-item toc-content-level-3"><a class="toc-content-link" href="#%E2%80%9C%E5%85%B3%E4%BA%8E%E2%80%9D%E9%A1%B5%E9%9D%A2"><span class="toc-content-number">3.1.</span> <span class="toc-content-text">“关于”页面</span></a></li></ol></li><li class="toc-content-item toc-content-level-2"><a class="toc-content-link" href="#%E5%B0%8F%E8%AF%B4%E6%A8%A1%E6%9D%BF"><span class="toc-content-number">4.</span> <span class="toc-content-text">小说模板</span></a><ol class="toc-content-child"><li class="toc-content-item toc-content-level-3"><a class="toc-content-link" href="#%E5%BA%94%E7%94%A8%E6%A8%A1%E6%9D%BF"><span class="toc-content-number">4.1.</span> <span class="toc-content-text">应用模板</span></a></li><li class="toc-content-item toc-content-level-3"><a class="toc-content-link" href="#%E6%A8%A1%E6%9D%BF%E9%85%8D%E7%BD%AE"><span class="toc-content-number">4.2.</span> <span class="toc-content-text">模板配置</span></a><ol class="toc-content-child"><li class="toc-content-item toc-content-level-4"><a class="toc-content-link" href="#%E6%96%87%E7%AB%A0%E5%B1%9E%E6%80%A7"><span class="toc-content-number">4.2.1.</span> <span class="toc-content-text">文章属性</span></a></li><li class="toc-content-item toc-content-level-4"><a class="toc-content-link" href="#%E5%AE%8C%E7%BB%93%E7%8A%B6%E6%80%81"><span class="toc-content-number">4.2.2.</span> <span class="toc-content-text">完结状态</span></a></li><li class="toc-content-item toc-content-level-4"><a class="toc-content-link" href="#%E6%96%87%E7%AB%A0%E7%AE%80%E4%BB%8B"><span class="toc-content-number">4.2.3.</span> <span class="toc-content-text">文章简介</span></a></li><li class="toc-content-item toc-content-level-4"><a class="toc-content-link" href="#%E4%BD%9C%E8%80%85%E7%9A%84%E8%AF%9D"><span class="toc-content-number">4.2.4.</span> <span class="toc-content-text">作者的话</span></a></li></ol></li></ol></li><li class="toc-content-item toc-content-level-2"><a class="toc-content-link" href="#%E7%89%B9%E8%89%B2%E5%8A%9F%E8%83%BD"><span class="toc-content-number">5.</span> <span class="toc-content-text">特色功能</span></a><ol class="toc-content-child"><li class="toc-content-item toc-content-level-3"><a class="toc-content-link" href="#%E5%BC%95%E7%94%A8%E5%9D%97"><span class="toc-content-number">5.1.</span> <span class="toc-content-text">引用块</span></a></li><li class="toc-content-item toc-content-level-3"><a class="toc-content-link" href="#%E9%80%89%E5%8F%96%E6%96%87%E6%9C%AC"><span class="toc-content-number">5.2.</span> <span class="toc-content-text">选取文本</span></a></li><li class="toc-content-item toc-content-level-3"><a class="toc-content-link" href="#%E6%AE%B5%E9%A6%96%E7%BC%A9%E8%BF%9B"><span class="toc-content-number">5.3.</span> <span class="toc-content-text">段首缩进</span></a></li><li class="toc-content-item toc-content-level-3"><a class="toc-content-link" href="#%E5%8A%A0%E5%AF%86%E5%8A%9F%E8%83%BD"><span class="toc-content-number">5.4.</span> <span class="toc-content-text">加密功能</span></a></li><li class="toc-content-item toc-content-level-3"><a class="toc-content-link" href="#404%E9%A1%B5%E9%9D%A2"><span class="toc-content-number">5.5.</span> <span class="toc-content-text">404页面</span></a></li><li class="toc-content-item toc-content-level-3"><a class="toc-content-link" href="#%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8"><span class="toc-content-number">5.6.</span> <span class="toc-content-text">音乐播放器</span></a></li></ol></li><li class="toc-content-item toc-content-level-2"><a class="toc-content-link" href="#%E6%95%88%E6%9E%9C%E5%B1%95%E7%A4%BA"><span class="toc-content-number">6.</span> <span class="toc-content-text">效果展示</span></a></li></ol></div></aside><div class="toc-blank" onclick="tocToggle()"></div></div></div></div><div id="tool-bar"><div id="tool-bar-main"><div id="tool-toggle" onclick="toolToggle()" title="设置"><i class="fa-solid fa-gear"></i></div><div id="toc-toggle" onclick="tocToggle()" title="目录"><i class="fa-solid fa-list-ul"></i></div><div id="go-to-comment" onclick="gotoComment()" title="评论"><i class="fa-regular fa-message fa-flip-horizontal"></i></div><div id="back-to-top" onclick="scrollToTop()" title="返回顶部"><i class="fa-solid fa-chevron-up"></i></div></div><div id="tool-bar-more" style="display: none;"><div id="darkmode-switch" onclick="darkmodeSwitch()" title="深色模式"><i class="fa-solid fa-circle-half-stroke"></i></div></div></div><div id="search-panel"><div class="search-container"><div class="search-head"><div class="search-title"><span><i class="fa-solid fa-paw"></i>搜索</span></div><div class="search-close-btn" onclick="toggleSearchWindow()"><i class="fa-regular fa-circle-xmark"></i></div></div><div class="search-box"><i class="fa-solid fa-magnifying-glass"></i><input id="search-input" type="text" placeholder="请输入需要搜索的内容……" value=""/></div><div class="search-body"><div id="search-count">匹配结果数: </div><div id="search-result"></div><div id="search-result-empty">未搜索到匹配的文章。</div></div></div></div><footer><div class="footer-content"><div class="copyright-info"><i class="fa-regular fa-copyright fa-xs"></i><span>2024</span><a href="/about">小橘猫</a><i class="fa-solid fa-cat fa-sm"></i><span>Powered by </span><a href="https://hexo.io/" target="_blank">Hexo</a><span> &amp; </span><a href="https://github.com/chanwj/hexo-theme-meow" target="_blank" title="v2.0.0">Theme Meow</a></div><div class="pageview-site"><span id="busuanzi_container_site_pv">总访问量 : <span id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner"></i></span></span><span id="busuanzi_container_site_uv">总访客数 : <span id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner"></i></span></span></div></div></footer>
+<script>const GLOBAL_CONFIG = {
+  comment: { theme: 'light'}
+}
+</script>
+<script src="/js/third-party/darkmode.js"></script>
+<script>var options = {
+  dark: '/css/darkmode.css',
+  startAt: '24:00',
+  endAt: '06:00',
+  checkSystemScheme: 'false',
+  saveOnToggle: 'true'
+};
+var darkMode = new DarkMode(options);
+// change comment theme synchronously 同步修改评论区主题
+if (darkMode.getMode() == "dark" && (true || true)) {
+  if (document.getElementById('comment')) {
+    document.getElementById('comment').getElementsByTagName('script')[0].setAttribute('data-theme', 'noborder_dark');
+  }
+}
+</script>
+<script src="/js/theme/tool-bar.js"></script>
+
+
+<script src="/js/theme/menu.js"></script>
+
+<script src="/js/theme/reward.js"></script>
+
+<script src="/js/jquery-3.7.1.min.js"></script>
+
+
+<script src="/js/theme/search.js"></script>
+<script>searchFunc('/search.xml', 'search-input', 'search-result');
+</script>
+<script src="/js/theme/toc.js"></script>
+<script>decodeToc();</script></body></html>
