@@ -1,8 +1,11 @@
 body.dm-dark {
+  background: #000;
+  background-image: none;
   color: #e0e0e0;
-}
-body.dm-dark::before {
-  animation: swtich-to-darkmode 0.5s ease-out forwards;
+  transition: background 0.5s ease-out;
+  -moz-transition: background 0.5s ease-out;
+  -webkit-transition: background 0.5s ease-out;
+  -o-transition: background 0.5s ease-out;
 }
 body.dm-dark .main-content {
   background: rgba(78,74,85,0.4);

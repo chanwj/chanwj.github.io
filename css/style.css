@@ -1377,12 +1377,17 @@ html *::-webkit-scrollbar-track {
   }
 }
 body {
-  background-color: MistyRose;
+  background: #ffdf6a;
+  transition: background 0.5s ease-out;
+  -moz-transition: background 0.5s ease-out;
+  -webkit-transition: background 0.5s ease-out;
+  -o-transition: background 0.5s ease-out;
   margin: 0;
   padding: 0;
   font-size: 18px;
   font-family: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', Sans-serif, Serif;
   color: #1f1235;
+  position: relative;
 }
 body .main {
   max-width: 1080px;
@@ -1395,10 +1400,6 @@ body .main .main-content {
   border-radius: 20px;
   margin: 0 auto;
   padding: 20px 0 40px;
-}
-body::after {
-  content: '';
-  background-color: #000;
 }
 @media screen and (max-width: 768px) {
   body {
@@ -1448,18 +1449,32 @@ body::after {
   border-bottom: 1px solid transparent;
   border-image: linear-gradient(to right, rgba(31,18,53,0.1), rgba(31,18,53,0.35), rgba(31,18,53,0.1)) 1;
 }
-.index-posts .index-post-item h1 {
-  margin-bottom: 10px;
+.index-posts .index-post-item .post-title-index {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: baseline;
+  justify-content: space-between;
 }
-.index-posts .index-post-item h1 a {
+.index-posts .index-post-item .post-title-index h1 a {
   text-decoration: none;
   color: #f9802d;
 }
-.index-posts .index-post-item h1 a:hover {
+.index-posts .index-post-item .post-title-index h1 a:hover {
   color: #fba414;
 }
-.index-posts .index-post-item h1 a i {
+.index-posts .index-post-item .post-title-index h1 a i {
   margin-right: 5px;
+}
+.index-posts .index-post-item .post-title-index .post-top {
+  padding: 3px 12px;
+  border: 1px #f9802d dashed;
+  border-radius: 15px;
+  text-align: center;
+  color: #f9802d;
+}
+.index-posts .index-post-item .post-title-index .post-top p {
+  margin: 0;
+  white-space: nowrap;
 }
 .index-posts .index-post-item .post-head-info {
   font-size: 16px;
@@ -1501,12 +1516,12 @@ body::after {
 .post-excerpt {
   margin: 1em 0;
 }
-.post-excerpt[excerpt-title-simplify=true] h1,
-.post-excerpt[excerpt-title-simplify=true] h2,
-.post-excerpt[excerpt-title-simplify=true] h3,
-.post-excerpt[excerpt-title-simplify=true] h4,
-.post-excerpt[excerpt-title-simplify=true] h5,
-.post-excerpt[excerpt-title-simplify=true] h6 {
+.post-excerpt[excerpt-simplify=true] h1,
+.post-excerpt[excerpt-simplify=true] h2,
+.post-excerpt[excerpt-simplify=true] h3,
+.post-excerpt[excerpt-simplify=true] h4,
+.post-excerpt[excerpt-simplify=true] h5,
+.post-excerpt[excerpt-simplify=true] h6 {
   font-size: 18px;
   margin: 1em 0;
 }
@@ -1514,12 +1529,12 @@ body::after {
   .index-post-item h1 {
     font-size: 24px;
   }
-  .post-excerpt[excerpt-title-simplify=true] h1,
-  .post-excerpt[excerpt-title-simplify=true] h2,
-  .post-excerpt[excerpt-title-simplify=true] h3,
-  .post-excerpt[excerpt-title-simplify=true] h4,
-  .post-excerpt[excerpt-title-simplify=true] h5,
-  .post-excerpt[excerpt-title-simplify=true] h6 {
+  .post-excerpt[excerpt-simplify=true] h1,
+  .post-excerpt[excerpt-simplify=true] h2,
+  .post-excerpt[excerpt-simplify=true] h3,
+  .post-excerpt[excerpt-simplify=true] h4,
+  .post-excerpt[excerpt-simplify=true] h5,
+  .post-excerpt[excerpt-simplify=true] h6 {
     font-size: 16px;
   }
 }
