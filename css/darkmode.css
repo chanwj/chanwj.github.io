@@ -1,6 +1,8 @@
 body.dm-dark {
-  background-color: #000;
   color: #e0e0e0;
+}
+body.dm-dark::before {
+  animation: swtich-to-darkmode 0.5s ease-out forwards;
 }
 body.dm-dark .main-content {
   background: rgba(78,74,85,0.4);
@@ -120,6 +122,15 @@ body.dm-dark .categories-item {
 body.dm-dark .categories-item:hover {
   color: #fff;
 }
+body.dm-dark .category-list a {
+  color: #e0e0e0;
+}
+body.dm-dark .category-list a:hover {
+  color: #fff;
+}
+body.dm-dark .category-list-count {
+  background-color: rgba(135,135,135,0.4);
+}
 body.dm-dark .page-not-found a {
   color: #fff;
 }
@@ -161,6 +172,9 @@ body.dm-dark figure.highlight ::-webkit-scrollbar-thumb {
 }
 body.dm-dark code {
   background-color: rgba(135,135,135,0.4);
+  color: #e0e0e0;
+}
+body.dm-dark #copyCodeBtn:hover {
   color: #e0e0e0;
 }
 body.dm-dark blockquote {
@@ -215,4 +229,16 @@ body.dm-dark .fiction-meta-key {
 body.dm-dark .fiction-before-content,
 body.dm-dark .fiction-notes-after {
   border-image: linear-gradient(to right, rgba(141,141,141,0.1), rgba(141,141,141,0.35), rgba(141,141,141,0.1)) 1;
+}
+body.dm-dark .linkcard-item:hover {
+  background-color: rgba(135,135,135,0.4);
+}
+body.dm-dark .linkcard-item a {
+  color: #e0e0e0;
+}
+body.dm-dark .linkcard-item a:hover {
+  color: #e0e0e0;
+}
+body.dm-dark .linkcard-item-icon {
+  color: #e0e0e0;
 }
