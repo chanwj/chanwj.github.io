@@ -1,17 +1,1 @@
-function decodeToc() {
-  'use strict';
-  if (document.getElementById('toc-body')) {
-    document.getElementById('toc-body').addEventListener('click', function (event) {
-      var targetElement = event.target.tagName;
-      var parentElement = event.target.parentElement;
-      var decodeId = "";
-      if (targetElement.tagName === 'A' && targetElement.getAttribute("class") === 'toc-content-link') {
-        decodeId = decodeURIComponent(targetElement.getAttribute("href").replace("#", ""));
-        document.getElementById(decodeId).scrollIntoView({ behavior: 'smooth' });
-      } else if (parentElement.tagName === 'A' && parentElement.getAttribute("class") === 'toc-content-link') {
-        decodeId = decodeURIComponent(parentElement.getAttribute("href").replace("#", ""));
-        document.getElementById(decodeId).scrollIntoView({ behavior: 'smooth' });
-      }
-    });
-  }
-}
+function decodeToc(){document.getElementById('toc-body')&&document.getElementById('toc-body').addEventListener('click',function(event){var targetElement=event.target.tagName,event=event.target.parentElement,decodeId='';'A'===targetElement.tagName&&'toc-content-link'===targetElement.getAttribute('class')?(decodeId=decodeURIComponent(targetElement.getAttribute('href').replace('#','')),document.getElementById(decodeId).scrollIntoView({behavior:'smooth'})):'A'===event.tagName&&'toc-content-link'===event.getAttribute('class')&&(decodeId=decodeURIComponent(event.getAttribute('href').replace('#','')),document.getElementById(decodeId).scrollIntoView({behavior:'smooth'}))})}
