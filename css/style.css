@@ -1224,10 +1224,10 @@ details[open] summary {
   align-items: center;
 }
 .article-item {
-  width: 17.5%;
+  width: 23%;
   aspect-ratio: 1/1;
   border: 1px solid #ccc;
-  margin-right: 2.3%;
+  margin-right: 1.8%;
   margin-top: 10px;
 }
 .article-item-card {
@@ -1264,7 +1264,7 @@ details[open] summary {
   margin-top: 10px;
 }
 .article-item-title {
-  font-size: 17px;
+  font-size: 18px;
   font-weight: bold;
   margin: 10px 10px 5px;
 }
@@ -1277,7 +1277,7 @@ details[open] summary {
 .article-item-hover {
   display: none;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 820px) {
   .article-item {
     width: 45%;
     margin-right: 4%;
@@ -1455,6 +1455,9 @@ body .main .main-content {
   align-items: baseline;
   justify-content: space-between;
 }
+.index-posts .index-post-item .post-title-index h1 {
+  margin-bottom: 0.3em;
+}
 .index-posts .index-post-item .post-title-index h1 a {
   text-decoration: none;
   color: #f9802d;
@@ -1514,7 +1517,10 @@ body .main .main-content {
   overflow: hidden;
 }
 .post-excerpt {
-  margin: 1em 0;
+  margin: 0.6em 0;
+}
+.post-excerpt p {
+  margin: 0.6em 0;
 }
 .post-excerpt[excerpt-simplify=true] h1,
 .post-excerpt[excerpt-simplify=true] h2,
@@ -2292,6 +2298,11 @@ header {
 #tool-bar-more div:hover {
   color: #fba414;
   cursor: pointer;
+}
+@media screen and (min-width: 1280px) {
+  #tool-bar {
+    right: calc((100% - 1080px) / 2 - 55px);
+  }
 }
 .post-copyright span {
   padding-left: 5px;

@@ -245,3 +245,6 @@ body.dm-dark .linkcard-item a:hover {
 body.dm-dark .linkcard-item-icon {
   color: #e0e0e0;
 }
+body.dm-dark .article-item-card:hover {
+  background-color: rgba(135,135,135,0.4);
+}
