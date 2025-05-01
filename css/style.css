@@ -1521,30 +1521,11 @@ body .main .main-content {
 }
 .post-excerpt {
   margin: 0.6em 0;
-}
-.post-excerpt p {
-  margin: 0.6em 0;
-}
-.post-excerpt[excerpt-simplify=true] h1,
-.post-excerpt[excerpt-simplify=true] h2,
-.post-excerpt[excerpt-simplify=true] h3,
-.post-excerpt[excerpt-simplify=true] h4,
-.post-excerpt[excerpt-simplify=true] h5,
-.post-excerpt[excerpt-simplify=true] h6 {
-  font-size: 18px;
-  margin: 1em 0;
+  text-align: justify;
 }
 @media screen and (max-width: 768px) {
   .index-post-item h1 {
     font-size: 24px;
-  }
-  .post-excerpt[excerpt-simplify=true] h1,
-  .post-excerpt[excerpt-simplify=true] h2,
-  .post-excerpt[excerpt-simplify=true] h3,
-  .post-excerpt[excerpt-simplify=true] h4,
-  .post-excerpt[excerpt-simplify=true] h5,
-  .post-excerpt[excerpt-simplify=true] h6 {
-    font-size: 16px;
   }
 }
 .post {
